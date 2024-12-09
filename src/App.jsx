@@ -10,7 +10,7 @@ import EditJobPage from "./pages/EditJobPage"
 //Add new job
 const App = () => {
   const addJob = async(newJob) => {
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/jobs`,{ 
+    const res = await fetch(`https://react-crash-2024-db.onrender.com/jobs`,{ 
       method: 'POST', 
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(newJob)
@@ -20,14 +20,14 @@ const App = () => {
 
   //Delete Job
   const deleteJob = async(id) => {
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/jobs/${id}`,{ 
+    const res = await fetch(`https://react-crash-2024-db.onrender.com/jobs/${id}`,{ 
       method: 'DELETE',
     });
     return
   }
 
   const updateJob = async(job) => {
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/jobs/${job.id}`,{ 
+    const res = await fetch(`https://react-crash-2024-db.onrender.com/jobs/${job.id}`,{ 
       method: 'PUT', 
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify(job)

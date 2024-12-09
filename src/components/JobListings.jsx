@@ -10,8 +10,8 @@ const JobListings = ({ isHome = false }) => {
 
   useEffect(() => {
     const apiUrl = isHome
-      ? `${process.env.REACT_APP_API_URL}/jobs?_limit=3`
-      : `${process.env.REACT_APP_API_URL}/jobs`;
+      ? `https://react-crash-2024-db.onrender.com/jobs?_limit=3`
+      : `$https://react-crash-2024-db.onrender.com/jobs`;
     const fetchJobs = async () => {
       try {
         const response = await fetch(apiUrl);
